@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "A Software Engineer personal page" }}</h2>
+    <hr class="small">
+    <span class="page-subheading">Not so random thoughts from Software engineer. Here I talk about technology in general, good practices and patterns.</span>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.content| remove: '<h2>' | remove: '</h2>' | strip_html | truncatewords: 50 }}[Read More]
+        </a>
+        
+
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+          
+      </li>
+      {%- endfor -%}
+    </ul>
+
+  {%- endif -%}
+
+</div>
