@@ -19,8 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   "Site criado com o intuito de reforçar meu aprendizado em jekyll"
 baseurl: "/kaios-blog" # the subpath of your site, e.g. /blog
 url: "https://raphaelsattler.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-linkedin_username: https://www.linkedin.com/in/kaiomagalhaes/
-github_username:  https://github.com/kaiomagalhaes
+linkedin_username: "kaiomagalhaes"
+github_username:  "kaiomagalhaes"
 
 # Build settings
 markdown: kramdown
